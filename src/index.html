@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title": "HomePage"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<div class="page__main-block main-block">
+					<!-- Оболочка слайдера -->
+					<div class="main-block__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="main-block__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="main-block__slide swiper-slide">
+								<div class="main-block__image">
+									<img src="@img/main-block/01.png" alt="Image">
+								</div>
+							</div>
+							<div class="main-block__slide swiper-slide">
+								<div class="main-block__image">
+									<img src="@img/main-block/01.png" alt="Image">
+								</div>
+							</div>
+							<div class="main-block__slide swiper-slide">
+								<div class="main-block__image">
+									<img src="@img/main-block/01.png" alt="Image">
+								</div>
+							</div>
+						</div>
+						<div class="main-block__logo">
+							<img src="@img/main-block/logo.png" alt="MainLogo">
+						</div>
+						<div class="main-block__footer">
+							<!-- Если нужна пагинация -->
+							<div class="main-block__pagination"></div>
+							<div class="main-block__text">Explore our collection</div>
+							<button data-goto=".main-catalog" data-goto-header type="button" class="main-block__scroll _icon-scroll-down"></button>
+						</div>
+					</div>
+				</div>
+				<section class="page__main-catalog main-catalog">
+					<div class="main-catalog__header">
+						<h1 class="main-catalog__title"><span>Shop your style</span></h1>
+						<div class="main-catalog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae gravida cursus adipiscing viverra at tortor, egestas odio parturient. Morbi ut lorem in erat. Et et molestie diam diam ultricies. Scelerisque duis diam ac cras dictum adipiscing. Venenatis at sit proin ut vitae adipiscing id facilisis.</div>
+					</div>
+					<div class="main-catalog__container_content">
+						<div class="main-catalog__items items-catalog">
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/01.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/02.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/03.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/04.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/05.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/06.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/07.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/08.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/09.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+							<article class="items-catalog__item item-catalog">
+								<div class="item-catalog__main">
+									<a href="" class="item-catalog__image-ibg">
+										<img data-src="@img/catalog/10.jpg" alt="Image">
+									</a>
+									<div class="item-catalog__actions">
+										<button type="button" class="item-catalog__favorite _icon-favorite"></button>
+										<button type="button" class="item-catalog__add-to-cart _icon-cart">ADD TO CART</button>
+									</div>
+								</div>
+								<div class="item-catalog__footer">
+									<h3 class="item-catalog__title">
+										<a href="" class="item-catalog__link-title">Multicolored armless top</a>
+									</h3>
+									<div class="item-catalog__price">₦ 10,000</div>
+								</div>
+							</article>
+						</div>
+						<div class="main-catalog__pagging">
+							@@include('html/_pagging.htm',{})
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

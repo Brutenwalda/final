@@ -1,0 +1,450 @@
+.account {
+	@include adaptiveValue("padding-top", 134, 100);
+	min-height: 100%;
+	// .account__container
+	&__container {
+		// .account__container_content
+		&_content {
+		}
+	}
+	// .account__content
+	&__content {
+		display: grid;
+		align-items: start;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue("gap", 32, 25);
+		&_menu {
+			grid-template-columns: rem(313) 1fr;
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .account__column
+	&__column {
+		display: grid;
+		@include adaptiveValue("gap", 32, 20);
+	}
+
+	&__block {
+		box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+		display: grid;
+		@include adaptiveValue("gap", 32, 20);
+		@include adaptiveValue("padding-top", 64, 20);
+		@include adaptiveValue("padding-bottom", 64, 20);
+		@include adaptiveValue("padding-left", 30, 20);
+		@include adaptiveValue("padding-right", 30, 20);
+	}
+	// .account__menu
+	&__menu {
+		background: #ffffff;
+		box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	}
+	// .account__section
+	&__section {
+	}
+	// .account__title
+	&__title {
+		@include adaptiveValue("font-size", 24, 20);
+		letter-spacing: rem(0.2);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 18);
+		}
+	}
+	// .form-account__step
+	&__step {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		font-weight: 800;
+		font-size: rem(20);
+		&::before {
+			background: #c4c4c4;
+			flex: 0 0 rem(20);
+			width: rem(20);
+			height: rem(20);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(10);
+			color: #fff;
+		}
+		&_margin {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 32, 20);
+			}
+		}
+		&_done {
+			&::before {
+				background-color: $pinkColor;
+			}
+		}
+	}
+	// .account__form
+	&__form {
+	}
+	// .account__information
+	&__information {
+		@media (min-width: $tablet) {
+			@include adaptiveValue("padding-top", 32, 20);
+		}
+	}
+
+	// .account__delivery
+	&__delivery {
+		flex-direction: row;
+		flex: 0 1 33.333%;
+		flex-wrap: wrap;
+		gap: rem(20);
+	}
+	&__peyments {
+		gap: rem(20);
+	}
+	// .account__order
+	&__order {
+	}
+	// .account__gift
+	&__gift {
+	}
+}
+//========================================================================================================================================================
+.menu-account {
+	overflow: hidden;
+	display: grid;
+	// .menu-account__title
+	&__title {
+		padding: rem(32);
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: rem(0.2);
+		font-weight: 800;
+	}
+	// .menu-account__list
+	&__list {
+	}
+	// .menu-account__item
+	&__item {
+		&_active {
+			position: relative;
+			.menu-account__link {
+				background-color: $pinkColor;
+				color: #fff;
+				font-weight: 800;
+				@media (any-hover: hover) {
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: rem(50);
+				height: rem(50);
+				background-color: #fff;
+				right: 0;
+			}
+			&::before {
+				top: 100%;
+				border-radius: 0 50% 0 0;
+				box-shadow: rem(5) rem(-5) 0px rem(5) $pinkColor;
+			}
+			&::after {
+				bottom: 100%;
+				border-radius: 0 0 50% 0;
+				box-shadow: rem(5) rem(5) 0px rem(5) $pinkColor;
+			}
+		}
+	}
+	// .menu-account__link
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: rem(18);
+		padding: rem(13) rem(32);
+		transition: all 0.3s ease 0s;
+		letter-spacing: rem(0.2);
+		&::before {
+			font-size: rem(14);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $pinkColor;
+			}
+		}
+	}
+	// .menu-account__sign-out
+	&__sign-out {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: rem(16);
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: math.div(18, 16);
+		letter-spacing: rem(0.2);
+		color: $pinkColor;
+		justify-self: center;
+		transition: all 0.3s ease 0s;
+		@include adaptiveValue("margin-top", 64, 30);
+		@include adaptiveValue("margin-bottom", 64, 30);
+		@include adaptiveValue("margin-left", 32, 20);
+		@include adaptiveValue("margin-right", 32, 20);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.form-account {
+	.form__error {
+		font-size: rem(12);
+		color: red;
+	}
+	// .form-account__content
+	&__content {
+		@include adaptiveValue("padding-top", 58, 20);
+		@include adaptiveValue("padding-bottom", 58, 20);
+		@include adaptiveValue("padding-left", 64, 20);
+		@include adaptiveValue("padding-right", 64, 20);
+		box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+		display: grid;
+		@include adaptiveValue("gap", 32, 20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 18);
+		}
+	}
+	// .form-account__block
+	&__block {
+		display: grid;
+		@include adaptiveValue("gap", 32, 20);
+	}
+	// .form-account__line
+	&__line {
+		display: grid;
+		@include adaptiveValue("gap", 16, 14);
+		@media (min-width: $tablet) {
+			.form-account__content & {
+				min-width: rem(350);
+				max-width: 40%;
+			}
+		}
+	}
+	// .form-account__label
+	&__label {
+		font-size: rem(14);
+	}
+	// .form-account__input
+	&__input {
+		border: 1px solid #000000;
+		border-radius: rem(6);
+		height: rem(60);
+	}
+	textarea.form-account__input {
+		resize: vertical;
+		height: rem(160);
+	}
+	// .form-account__button
+	&__button {
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	// .form-account__link
+	&__link {
+		color: $pinkColor;
+		font-weight: 600;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+.order-account {
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	// .order-account__body
+	&__body {
+		@include adaptiveValue("padding-top", 64, 20);
+		@include adaptiveValue("padding-bottom", 64, 20);
+		@include adaptiveValue("padding-left", 32, 20);
+		@include adaptiveValue("padding-right", 32, 20);
+	}
+	// .order-account__title
+	&__title {
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: rem(20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 64, 20);
+		}
+	}
+	// .order-account__list
+	&__list {
+		display: grid;
+		gap: rem(32);
+	}
+	// .order-account__item
+	&__item {
+	}
+	// .order-account__prices
+	&__prices {
+	}
+	// .order-account__total
+	&__total {
+	}
+}
+.item-order-account {
+	display: flex;
+	gap: rem(32);
+	@media (max-width: em(1279.98)) and (min-width: $tablet) {
+		flex-direction: column;
+	}
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+	}
+	// .item-order-account__image
+	&__image-ibg {
+		flex: 0 0 rem(85);
+		height: rem(85);
+		@media (max-width: em(1279.98)) and (min-width: $tablet) {
+			padding-bottom: 100%;
+		}
+		@media (max-width: $mobileSmall) {
+			padding-bottom: 100%;
+		}
+	}
+	// .item-order-account__body
+	&__body {
+		display: grid;
+		gap: rem(8);
+	}
+	// .item-order-account__title
+	&__title {
+		font-weight: 600;
+		font-size: rem(20);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .item-order-account__size
+	&__size {
+		color: #686868;
+		font-weight: 600;
+	}
+	// .item-order-account__price
+	&__price {
+		color: $pinkColor;
+		font-size: rem(14);
+		font-weight: 600;
+	}
+	// .item-order-account__quantity
+	&__quantity {
+		display: flex;
+		gap: rem(10);
+		align-items: center;
+	}
+	// .item-order-account__label
+	&__label {
+		font-size: rem(14);
+	}
+	// .item-order-account__value
+	&__value {
+	}
+}
+.quantity-order-account {
+	// .quantity-order-account__label
+	&__label {
+	}
+	// .quantity-order-account__body
+	&__body {
+	}
+}
+.prices-order-account {
+	border-top: 1px solid #c4c4c4;
+	display: grid;
+	gap: rem(16);
+	@include adaptiveValue("padding", 32, 20);
+	// .prices-order-account__item
+	&__item {
+	}
+}
+.item-price-order {
+	display: flex;
+	font-weight: 600;
+	// .item-price-order__label
+	&__label {
+		flex: 1 1 auto;
+		padding-right: rem(5);
+	}
+	// .item-price-order__value
+	&__value {
+		flex: 0 1 auto;
+	}
+}
+.total-order-account {
+	border-top: 1px solid #c4c4c4;
+	@include adaptiveValue("padding", 32, 20);
+	display: flex;
+	font-weight: 600;
+	// .total-order-account__label
+	&__label {
+		flex: 1 1 auto;
+		padding-right: rem(5);
+		text-transform: uppercase;
+	}
+	// .total-order-account__value
+	&__value {
+		flex: 0 1 auto;
+		color: $pinkColor;
+	}
+}
+//========================================================================================================================================================
+.gift-account {
+	// .gift-account__body
+	&__body {
+		display: flex;
+		gap: rem(5);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	// .gift-account__label
+	&__label {
+		flex: 1 1 auto;
+		font-weight: 600;
+	}
+	// .gift-account__actions
+	&__actions {
+		display: flex;
+		@include adaptiveValue("gap", 30, 15);
+	}
+	// .gift-account__button
+	&__button {
+		display: inline-block;
+		padding: rem(10);
+		color: #000;
+		border: 1px solid #000;
+		border-radius: rem(6);
+		&_active {
+			color: #fff;
+			border: 1px solid $pinkColor;
+			background-color: $pinkColor;
+		}
+	}
+	// .gift-account__text
+	&__text {
+		font-size: rem(14);
+		line-height: math.div(18, 14);
+	}
+}

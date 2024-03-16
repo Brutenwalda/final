@@ -1,0 +1,186 @@
+// Заголовки, общие БЄМ блоки и проче...
+.page {
+	@include adaptiveValue("padding-bottom", 128, 40);
+	// .page__main-block
+	&__main-block {
+	}
+	// .page__catalog
+	&__main-catalog {
+	}
+	// .page__catalog
+	&__catalog {
+	}
+}
+//========================================================================================================================================================
+.items-catalog {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(290), rem(296)));
+	justify-content: center;
+	// align-items: start;
+	@include adaptiveValue("gap", 50, 20);
+	// .items-catalog__item
+	&__item {
+	}
+}
+.item-catalog {
+	background-color: #fff;
+	transition: all 0.8s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+			.item-catalog__actions {
+				opacity: 1;
+				visibility: visible;
+			}
+			.item-catalog__image-ibg {
+				img {
+					transform: scale(1.03);
+				}
+			}
+		}
+	}
+	@media (any-hover: none) {
+		box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+	}
+	// .item-catalog__main
+	&__main {
+		position: relative;
+	}
+	// .item-catalog__image-ibg
+	&__image-ibg {
+		overflow: hidden;
+		display: block;
+		padding-bottom: percent(457, 297);
+		img {
+			transition: all 1s ease 0s;
+		}
+	}
+	// .item-catalog__actions
+	&__actions {
+		background-color: rgba(0, 0, 0, 0.25);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: rem(13);
+		pointer-events: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.8s ease 0s;
+		@media (any-hover: none) {
+			opacity: 1;
+			visibility: visible;
+			flex-direction: row;
+			padding: rem(20);
+			height: auto;
+		}
+	}
+	// .item-catalog__favorite
+	&__favorite {
+		width: rem(37);
+		height: rem(37);
+		flex: 0 0 rem(37);
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $pinkColor;
+		border-radius: rem(2);
+		font-size: rem(14);
+		pointer-events: auto;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $pinkColor;
+				color: #fff;
+			}
+		}
+	}
+	// .item-catalog__add-to-cart
+	&__add-to-cart {
+		pointer-events: auto;
+		background-color: #fff;
+		padding: rem(11.5) rem(18);
+		border-radius: rem(2);
+		display: flex;
+		flex-direction: row-reverse;
+		text-transform: uppercase;
+		align-items: center;
+		font-weight: 700;
+		font-size: rem(10);
+		gap: rem(11);
+		line-height: math.div(14, 10);
+		transition: all 0.3s ease 0s;
+		&::before {
+			transition: all 0.3s ease 0s;
+			font-size: rem(14);
+			color: $pinkColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $pinkColor;
+				color: #fff;
+				&::before {
+					color: #fff;
+				}
+			}
+		}
+	}
+	// .item-catalog__footer
+	&__footer {
+		display: grid;
+		gap: rem(10);
+		justify-items: center;
+		padding: rem(32);
+		font-size: rem(20);
+		letter-spacing: rem(0.2);
+		line-height: math.div(22, 20);
+		text-align: center;
+	}
+	// .item-catalog__link-title
+	&__link-title {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .item-catalog__price
+	&__price {
+	}
+}
+//========================================================================================================================================================
+.up {
+	position: absolute;
+	bottom: 100%;
+	width: rem(60);
+	height: rem(50);
+	border: 1px solid #000;
+	border-radius: rem(5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translate(0, rem(-20));
+	@include adaptiveValue("right", 52, 15);
+	transition: all 0.3s ease 0s;
+	&::before {
+		transform: rotate(-90deg);
+	}
+	@media (max-width: $mobile) {
+		bottom: auto;
+		top: 0;
+		transform: translate(0, rem(30));
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $pinkColor;
+			border: 1px solid $pinkColor;
+			color: #fff;
+		}
+	}
+}
